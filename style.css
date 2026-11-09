@@ -1,0 +1,305 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    background: #0f172a;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    font-size: 25px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 85vh;
+    background: linear-gradient(120deg, #0f172a, #1e3a5f);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.intro {
+    color: #38bdf8;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.about-content h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+.info-card,
+.card,
+.education-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border-bottom: 4px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h3 {
+    color: #0284c7;
+    margin-bottom: 12px;
+}
+
+.education-list {
+    display: grid;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.education-item {
+    border-left: 5px solid #38bdf8;
+}
+
+.education-item h3 {
+    color: #0284c7;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #38bdf8;
+    border-color: #38bdf8;
+}
+
+.contact-form small {
+    color: #dc2626;
+    margin-bottom: 10px;
+    min-height: 18px;
+}
+
+.contact-form .btn {
+    margin-top: 10px;
+}
+
+#form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+#current-year {
+    color: #38bdf8;
+}
+
+#more-content {
+    margin-top: 15px;
+    color: #475569;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 15px 0;
+        background: #0f172a;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .about-content,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+}
